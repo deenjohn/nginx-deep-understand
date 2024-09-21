@@ -1,2 +1,2 @@
-# nginx-deep-understand
-All about Nginx
+# nginx-app-cors-debug
+Cors using nginx
