@@ -23,6 +23,13 @@ COPY nginx.conf /etc/nginx/nginx.conf
 # Copy the built React app from the previous stage
 COPY --from=build /usr/src/app/build /usr/share/nginx/html
 
+# Set permissions on the certificate files
+# Copy SSL certificates
+COPY certs/localhost.pem /certs/cert.pem
+COPY certs/localhost-key.pem /certs/key.pem
+
+# Set permissions on the certificate files
+RUN chmod 644 /certs/cert.pem /certs/key.pem
 # Expose port 80 for Nginx
 EXPOSE 80
 
