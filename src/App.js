@@ -24,6 +24,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        React App
         <img src={logo} className="App-logo" alt="logo" />
         {users.map((user) => 
           <p>{user.name}</p>
